@@ -9,7 +9,16 @@ var howLong = function() {
         alert("Okay! I'll make sure your password is " + passLength + " characters long!")
     }
 }
-var lowerOption = function() {}
+var lowerOption = function() {
+    var lowerAlpha = confirm("Would you like your password to contain lowercase letters?")
+        if (lowerAlpha) {
+            alert("Okay! I'll make sure your password contains lower case letters!")
+        }
+        else {
+            alert("Okay! I'll make sure your password doesn't contains lower case letters!")
+        }
+
+}
 var upperOption = function() {}
 var numericOption = function() {}
 var specialOption = function() {}
@@ -19,6 +28,7 @@ var specialOption = function() {}
 var generatePassword = function() {
     alert("Welcome to Password Generator!");
     howLong();
+    lowerOption();
 
 }    
 
