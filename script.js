@@ -1,60 +1,63 @@
 // Assignment code here
-var howLong = function() {
-    var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
-        if (lengthChoice < 8 || lengthChoice > 128) {
-        alert("Please choose a number from 8 to 128");
-        howLong();
-    }
-    else {
-        alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!")
-    }
-}
-var lowerOption = function() {
-    var lowerChoice = confirm("Would you like your password to contain lowercase letters?")
-        if (lowerChoice) {
-            alert("Okay! I'll make sure your password contains lowercase letters!")
-        }
-        else {
-            alert("Okay! I'll make sure your password doesn't contains lowercase letters!")
-        }
-
-}
-var upperOption = function() {
-    var upperChoice = confirm("Would you like your password to contain uppercase letters?")
-        if (upperChoice) {
-            alert("Okay! I'll make sure your password contains uppercase letters!")
-        }
-        else {
-            alert("Okay! I'll make sure your password doesn't contains uppercase letters!")
-        }
-}
-var numericOption = function() {
-    var numericChoice = confirm("Would you like your password to contain numbers?")
-        if (numericChoice) {
-            alert("Okay! I'll make sure your password contains numbers!")
-        }
-        else {
-            alert("Okay! I'll make sure your password doesn't contain numbers!")
-        }
-}
-var specialOption = function() {
-    var specialChoice = confirm("Would you like your password to contain special characters?")
-        if(specialChoice) {
-            alert("Okay! I'll make sure your password contains special characters!")
-        }
-        else {
-            alert("Okay! I'll make sure your password doesn't contain special characters!")
-        }
-}
-
 var generatePassword = function() {
-    alert("Welcome to Password Generator!");
-    howLong();
-    lowerOption();
-    upperOption();
-    numericOption();
-    specialOption();
 
+// Prompts
+        alert("Welcome to Password Generator!"); 
+
+        var criteria = function() {
+
+        var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
+            if (lengthChoice < 8 || lengthChoice > 128) {
+            alert("Please choose a number from 8 to 128");
+            criteria();
+        }
+            else {
+            alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!")
+        }
+    
+        var lowerChoice = confirm("Would you like your password to contain lowercase letters?")
+            if (lowerChoice) {
+                alert("Okay! I'll make sure your password contains lowercase letters!")
+            }
+            else {
+                alert("Okay! I'll make sure your password doesn't contains lowercase letters!")
+            }
+    
+        var upperChoice = confirm("Would you like your password to contain uppercase letters?")
+            if (upperChoice) {
+                alert("Okay! I'll make sure your password contains uppercase letters!")
+            }
+            else {
+                alert("Okay! I'll make sure your password doesn't contains uppercase letters!")
+            }
+    
+        var numericChoice = confirm("Would you like your password to contain numbers?")
+            if (numericChoice) {
+                alert("Okay! I'll make sure your password contains numbers!")
+            }
+            else {
+                alert("Okay! I'll make sure your password doesn't contain numbers!")
+            }
+    
+        var specialChoice = confirm("Would you like your password to contain special characters?")
+            if(specialChoice) {
+                alert("Okay! I'll make sure your password contains special characters!")
+            }
+            else {
+                alert("Okay! I'll make sure your password doesn't contain special characters!")
+            }
+
+        var checkChoice     
+            if(lowerChoice === false && upperChoice === false && numericChoice === false && specialChoice === false) {
+                alert("I'm sorry, but you need to choose at least one set of characters so I can make you a new password.");
+                criteria();
+            }
+            else{
+                alert("You got it!")
+            }
+        
+    }
+   criteria();
 }    
 
 // Get references to the #generate element
