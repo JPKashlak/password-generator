@@ -1,18 +1,7 @@
 // Assignment code here
-
 var generatePassword = function() {
 
-    var finishingTouches = function() {
-        var finalProduct = "";
-        var options = "abcdefghijklmnopqrstuvwxyz";
-        var optionsLength = options.length;
-        for (var i = 0; i < lengthChoice; i++) {
-            finalProduct += options.charAt(Math.floor(Math.random() * optionsLength));
-        }
-        return finalProduct;
-    };
-
-        alert("Welcome to Password Generator!"); 
+    alert("Welcome to Password Generator!"); 
         
 // Prompts
         var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
@@ -63,11 +52,24 @@ var generatePassword = function() {
             }
             else{
                 alert("Here we go!\nBased on your choices, your new password is...");
-                debugger;
-                finishingTouches();
+                var finalProduct = "";
+                var options = "abcdefghijklmnopqrstuvwxyz"
+                var optionsLength = options.length;
+    
+                for (var i = 0; i < lengthChoice; i++) {
+                    finalProduct += options.charAt(Math.floor(Math.random() * optionsLength));
+                }
+                return finalProduct;
+            
             }
+
 // generatePassword function ends
+
 }
+
+//var finishingTouches = function() {
+    
+//};
 
 
 
