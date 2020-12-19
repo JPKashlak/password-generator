@@ -1,20 +1,29 @@
 // Assignment code here
+
 var generatePassword = function() {
 
-        alert("Welcome to Password Generator!"); 
-
-// Prompts
-        
-
-        var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
-            if (lengthChoice < 8 || lengthChoice > 128) {
-            alert("Please choose a number from 8 to 128");
-            criteria();
+    var finishingTouches = function() {
+        var finalProduct = "";
+        var options = "abcdefghijklmnopqrstuvwxyz";
+        var optionsLength = options.length;
+        for (var i = 0; i < lengthChoice; i++) {
+            finalProduct += options.charAt(Math.floor(Math.random() * optionsLength));
         }
+        return finalProduct;
+    };
+
+        alert("Welcome to Password Generator!"); 
+        
+// Prompts
+        var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
+            if (lengthChoice < 8 || lengthChoice > 128 || lengthChoice === null) {
+            alert("Please choose a number from 8 to 128");
+            generatePassword();
+            }
             else {
             alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!")
-        }
-    
+            }
+            console.log(lengthChoice);
         var lowerChoice = confirm("Would you like your password to contain lowercase letters?")
             if (lowerChoice) {
                 alert("Okay! I'll make sure your password contains lowercase letters!")
@@ -50,15 +59,17 @@ var generatePassword = function() {
          // Final Check
             if(lowerChoice === false && upperChoice === false && numericChoice === false && specialChoice === false) {
                 alert("I'm sorry, but you need to choose at least one set of characters so I can make you a new password.\nPlease try again.");
-                criteria();  
+                generatePassword();  
             }
             else{
                 alert("Here we go!\nBased on your choices, your new password is...");
-            
+                debugger;
+                finishingTouches();
             }
-    
 // generatePassword function ends
-}    
+}
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
