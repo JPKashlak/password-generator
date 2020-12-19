@@ -1,10 +1,10 @@
 // Assignment code here
 var generatePassword = function() {
 
-// Prompts
         alert("Welcome to Password Generator!"); 
 
-        var criteria = function() {
+// Prompts
+        
 
         var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
             if (lengthChoice < 8 || lengthChoice > 128) {
@@ -46,18 +46,18 @@ var generatePassword = function() {
             else {
                 alert("Okay! I'll make sure your password doesn't contain special characters!")
             }
-
-        var checkChoice     
+        
+         // Final Check
             if(lowerChoice === false && upperChoice === false && numericChoice === false && specialChoice === false) {
-                alert("I'm sorry, but you need to choose at least one set of characters so I can make you a new password.");
-                criteria();
+                alert("I'm sorry, but you need to choose at least one set of characters so I can make you a new password.\nPlease try again.");
+                criteria();  
             }
             else{
-                alert("You got it!")
+                alert("Here we go!\nBased on your choices, your new password is...");
+            
             }
-        
-    }
-   criteria();
+    
+// generatePassword function ends
 }    
 
 // Get references to the #generate element
