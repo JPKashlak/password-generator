@@ -51,26 +51,37 @@ var generatePassword = function() {
                 generatePassword();  
             }
             else{
-                alert("Here we go!\nBased on your choices, your new password is...");
-                var finalProduct = "";
-                var options = "abcdefghijklmnopqrstuvwxyz"
-                var optionsLength = options.length;
-    
-                for (var i = 0; i < lengthChoice; i++) {
-                    finalProduct += options.charAt(Math.floor(Math.random() * optionsLength));
-                }
-                return finalProduct;
-            
+                alert("Here we go!\nBased on your choices, your new password is..."); 
             }
 
-// generatePassword function ends
+            var finalProduct = "";
+            var options = "abcdefghijklmnopqrstuvwxyz";
+            var optionsLength = options.length;
 
+            for (var i = 0; i < lengthChoice; i++) {
+                finalProduct += options.charAt(Math.floor(Math.random() * optionsLength));
+            }
+            
+            return finalProduct;
+// generatePassword function ends
 }
 
-//var finishingTouches = function() {
-    
-//};
 
+// [ 
+//     {
+//         name: "lowercase"
+//         characters: "abcdefghijklmnopqrstuvwxyz"
+//     }, 
+//     {   name" uppercase"
+//         characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//     }, 
+//     {   "numeric"
+//         characters: "0123456789"
+//     },
+//     {   "special"
+//         characters: "!'()*+,-./:;<=>?@[]^_`{|}~"
+//     }
+// ];
 
 
 // Get references to the #generate element
