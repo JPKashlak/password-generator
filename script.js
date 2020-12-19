@@ -1,5 +1,8 @@
 // Assignment code here
-
+var generatePassword = function() {
+    alert("Welcome to Password Generator!");
+    confirm("Do you want a fancy password?");
+}    
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
