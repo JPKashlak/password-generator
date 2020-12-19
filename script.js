@@ -1,34 +1,59 @@
 // Assignment code here
 var howLong = function() {
-    var passLength = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
-        if (passLength < 8 || passLength > 128) {
+    var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
+        if (lengthChoice < 8 || lengthChoice > 128) {
         alert("Please choose a number from 8 to 128");
         howLong();
     }
     else {
-        alert("Okay! I'll make sure your password is " + passLength + " characters long!")
+        alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!")
     }
 }
 var lowerOption = function() {
-    var lowerAlpha = confirm("Would you like your password to contain lowercase letters?")
-        if (lowerAlpha) {
-            alert("Okay! I'll make sure your password contains lower case letters!")
+    var lowerChoice = confirm("Would you like your password to contain lowercase letters?")
+        if (lowerChoice) {
+            alert("Okay! I'll make sure your password contains lowercase letters!")
         }
         else {
-            alert("Okay! I'll make sure your password doesn't contains lower case letters!")
+            alert("Okay! I'll make sure your password doesn't contains lowercase letters!")
         }
 
 }
-var upperOption = function() {}
-var numericOption = function() {}
-var specialOption = function() {}
-
-
+var upperOption = function() {
+    var upperChoice = confirm("Would you like your password to contain uppercase letters?")
+        if (upperChoice) {
+            alert("Okay! I'll make sure your password contains uppercase letters!")
+        }
+        else {
+            alert("Okay! I'll make sure your password doesn't contains uppercase letters!")
+        }
+}
+var numericOption = function() {
+    var numericChoice = confirm("Would you like your password to contain numbers?")
+        if (numericChoice) {
+            alert("Okay! I'll make sure your password contains numbers!")
+        }
+        else {
+            alert("Okay! I'll make sure your password doesn't contain numbers!")
+        }
+}
+var specialOption = function() {
+    var specialChoice = confirm("Would you like your password to contain special characters?")
+        if(specialChoice) {
+            alert("Okay! I'll make sure your password contains special characters!")
+        }
+        else {
+            alert("Okay! I'll make sure your password doesn't contain special characters!")
+        }
+}
 
 var generatePassword = function() {
     alert("Welcome to Password Generator!");
     howLong();
     lowerOption();
+    upperOption();
+    numericOption();
+    specialOption();
 
 }    
 
