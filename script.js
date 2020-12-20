@@ -11,10 +11,10 @@ var generatePassword = function() {
         
 // Prompts
 
-        var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
+        var lengthChoice = prompt("How many characters long would you like your new password to be?\n(Please choose from a number from 8 to 128)");
             while (lengthChoice < 8 || lengthChoice > 128 || lengthChoice === null) {
                 alert("Please choose a number from 8 to 128.")
-                var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
+                var lengthChoice = prompt("How many characters long would you like your new password to be?\n(Please choose from 8 to 128)");
             }
                 var lengthChoice = Math.floor(lengthChoice);
                 alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!");
