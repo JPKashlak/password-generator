@@ -12,7 +12,7 @@ var generatePassword = function() {
         var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
             if (lengthChoice < 8 || lengthChoice > 128 || lengthChoice === null) {
             alert("Please choose a number from 8 to 128");
-            generatePassword();
+            
             }
             else {
             alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!")
@@ -78,24 +78,6 @@ var generatePassword = function() {
             return finalProduct;
 // generatePassword function ends
 }
-
-
-// [ 
-//     {
-//         name: "lowercase"
-//         characters: "abcdefghijklmnopqrstuvwxyz"
-//     }, 
-//     {   name" uppercase"
-//         characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-//     }, 
-//     {   "numeric"
-//         characters: "0123456789"
-//     },
-//     {   "special"
-//         characters: "!'()*+,-./:;<=>?@[]^_`{|}~"
-//     }
-// ];
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
