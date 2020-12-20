@@ -1,4 +1,9 @@
 // Assignment code here
+var charLower = "";
+var charUpper = "";
+var charNumb = "";
+var charSpec = "";
+
 var generatePassword = function() {
 
     alert("Welcome to Password Generator!"); 
@@ -16,33 +21,41 @@ var generatePassword = function() {
         var lowerChoice = confirm("Would you like your password to contain lowercase letters?")
             if (lowerChoice) {
                 alert("Okay! I'll make sure your password contains lowercase letters!")
+                var charLower = "abcdefghijklmnopqrstuvwxyz"
             }
             else {
                 alert("Okay! I'll make sure your password doesn't contains lowercase letters!")
+                var charLower = ""
             }
     
         var upperChoice = confirm("Would you like your password to contain uppercase letters?")
             if (upperChoice) {
                 alert("Okay! I'll make sure your password contains uppercase letters!")
+                var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             }
             else {
                 alert("Okay! I'll make sure your password doesn't contains uppercase letters!")
+                var charUpper = ""
             }
     
         var numericChoice = confirm("Would you like your password to contain numbers?")
             if (numericChoice) {
                 alert("Okay! I'll make sure your password contains numbers!")
+                charNumb = "1234567890"
             }
             else {
                 alert("Okay! I'll make sure your password doesn't contain numbers!")
+                charNumb = ""
             }
     
         var specialChoice = confirm("Would you like your password to contain special characters?")
             if(specialChoice) {
                 alert("Okay! I'll make sure your password contains special characters!")
+                charSpec = "!'()*+,-./:;<=>?@[]^_`{|}~"
             }
             else {
                 alert("Okay! I'll make sure your password doesn't contain special characters!")
+                charSpec = ""
             }
         
          // Final Check
@@ -55,13 +68,13 @@ var generatePassword = function() {
             }
 
             var finalProduct = "";
-            var options = "abcdefghijklmnopqrstuvwxyz";
+            var options = charLower + charUpper + charNumb + charSpec;
             var optionsLength = options.length;
 
             for (var i = 0; i < lengthChoice; i++) {
                 finalProduct += options.charAt(Math.floor(Math.random() * optionsLength));
             }
-            
+
             return finalProduct;
 // generatePassword function ends
 }
