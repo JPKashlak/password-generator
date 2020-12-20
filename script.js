@@ -60,10 +60,8 @@ var generatePassword = function() {
             }
         
          // Final Check
-
             if(lowerChoice === false && upperChoice === false && numericChoice === false && specialChoice === false) {
-                alert("I'm sorry, but you need to choose at least one set of characters so I can make you a new password.\nPlease try again.");
-                generatePassword();  
+                alert("I'm sorry, but you need to choose at least one set of characters so I can make you a new password.\nPlease try again.");  
             }
             else{
                 alert("Here we go!\nBased on your choices, your new password is..."); 
