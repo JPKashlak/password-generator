@@ -17,9 +17,8 @@ var generatePassword = function() {
                 var lengthChoice = prompt("How many characters would you like your new password to be?\n(Please choose from 8 to 128)");
             }
                 var lengthChoice = Math.floor(lengthChoice);
-                alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!")
-            
-            
+                alert("Okay! I'll make sure your password is " + lengthChoice + " characters long!");
+               
         var lowerChoice = confirm("Would you like your password to contain lowercase letters?")
             if (lowerChoice) {
                 alert("Okay! I'll make sure your password contains lowercase letters!")
